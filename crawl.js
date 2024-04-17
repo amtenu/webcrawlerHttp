@@ -1,6 +1,6 @@
 function normalizeUrl(urlString) {
   const urlObj = new URL(urlString);
-  const hostPath = `${urlObj.hostname}${urlObj.pathname}`;
+  const hostPath = `${urlObj.hostname.toLowerCase()}${urlObj.pathname.toLowerCase()}`;
   if (hostPath.length > 0 && hostPath.slice(-1) === "/") {
     return hostPath.slice(0, -1);
   }
